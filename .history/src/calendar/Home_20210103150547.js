@@ -1,0 +1,96 @@
+import React from 'react';
+import "./Home.css";
+import MyApp from "./calendar";
+ 
+function Home() {
+  
+  return (
+    <div className="main">
+      <div className='container'>
+        <div className="row">
+          <div className="col-sm-5 calendar">
+             <MyApp />
+          </div>
+          <div className="col-sm-7">
+
+            <div style={{float:"right", paddingTop:"1%"}}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+             <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+             <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+            </svg>
+            </div>
+
+            <div className="row" style={{paddingTop:"4%"}}>
+               <div className="col-sm-5" style={{border:"1px solid red"}}>
+                 <div className="row">
+                 <h1 style={{color:"white", fontSize:"2vw"}}>Local Events </h1>
+               <svg  style={{margin:"5% 0% 0% 3%"}} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+               </svg>
+                 </div>
+               </div>
+               <div className="col-sm-7" style={{border:"1px solid red", paddingTop:"3%"}}>
+               <hr style={{marginTop:"10px"}} />
+
+               </div>
+              
+            </div>
+
+            <div className="row">
+          <div className="col-sm-5 row" style={{color:"white", fontSize:"0.9vw"}}>
+            <div className="col-sm-4">
+             <p>Upcoming</p>
+            </div>
+            <div className="col-sm-4">
+              <p>Papular</p>
+            </div>
+            <div className="col-sm-4">
+              <p>Newest</p>
+            </div>
+
+             {/* Carosal design  */}
+
+             <div>
+             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                   <h1> dtu6 01</h1>
+                  </div>
+                  <div class="carousel-item">
+                   
+                  </div>
+                  <div class="carousel-item">
+                   
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+                </div>
+             </div>
+
+          </div>
+
+        </div>
+
+          </div>
+          
+        </div>
+
+      </div>
+     
+    </div>
+  );
+}
+export default Home;
